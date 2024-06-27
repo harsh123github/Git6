@@ -1,6 +1,8 @@
 package com.velocity.collection;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class EmployeeList {
@@ -11,7 +13,9 @@ public class EmployeeList {
 		emplist.add(new Employee(103, "Aayan",50000,"mumbai"));
 		emplist.add(new Employee(104, "Rahul",40000,"delhi"));
 		emplist.add(new Employee(105, "Akky",30000,"pune"));
-		System.out.println(emplist);
+		System.out.println("before sorting" +emplist);
+		Collections.sort(emplist, new SalaryComparator());//new salary is instance of comparator
+		System.out.println("After sorting based on salary" + emplist);
 	}
 
 }
